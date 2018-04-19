@@ -86,6 +86,7 @@
             Content="n/a" 
             Height="97" Canvas.Left="10" Canvas.Top="212" Width="497"/>
         <TextBox 
+            x:Name="txbLetterInput"
             Height="70" 
             Canvas.Left="248" 
             TextWrapping="Wrap" 
@@ -98,5 +99,35 @@
             AcceptsReturn="False"
             AcceptsTab="False"
             Canvas.Top="26" Width="60"/>
+        <Button 
+            x:Name="btnGuess"
+            Content="Guess letter" 
+            Height="28" 
+            Canvas.Left="234" 
+            Canvas.Top="101" 
+            Width="90"
+            Click="btnGuess_Click"/>
+        <TextBox 
+            x:Name="txbWordInput"
+            Height="70" 
+            Canvas.Left="336" 
+            TextWrapping="Wrap" 
+            Text="input guess" 
+            FontSize="30"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Canvas.Top="26" 
+            Width="171"/>
+        <Button 
+            x:Name="btnSolve"
+            Content="Guess word" 
+            Height="23" 
+            Canvas.Left="336" 
+            Canvas.Top="101" 
+            Width="171"
+            Click="btnSolve_Click"/>
+        <Label Content="input a lowercase" Height="25" Canvas.Left="228" Canvas.Top="134" Width="103"/>
+        <Label Content="letter" Height="25" Canvas.Left="228" Canvas.Top="147" Width="103"/>
+        <Label Content="Guess the full word" Height="31" Canvas.Left="336" Canvas.Top="134" Width="171"/>
     </Canvas>
 </Window>
