@@ -83,6 +83,7 @@
             x:Name="lblShowWord"
             FontSize="30"
             HorizontalContentAlignment="Center"
+            Background="SaddleBrown"
             Content="n/a" 
             Height="97" Canvas.Left="10" Canvas.Top="212" Width="497"/>
         <TextBox 
@@ -92,6 +93,7 @@
             TextWrapping="Wrap" 
             Text="a"
             FontSize="50"
+            Background="Beige"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Top"
             MaxLength="1"
@@ -104,6 +106,7 @@
             Content="Guess letter" 
             Height="28" 
             Canvas.Left="234" 
+            Background="SaddleBrown"
             Canvas.Top="101" 
             Width="90"
             Click="btnGuess_Click"/>
@@ -111,6 +114,7 @@
             x:Name="txbWordInput"
             Height="70" 
             Canvas.Left="336" 
+            Background="Beige"
             TextWrapping="Wrap" 
             Text="input guess" 
             FontSize="30"
@@ -122,6 +126,7 @@
             x:Name="btnSolve"
             Content="Guess word" 
             Height="23" 
+            Background="SaddleBrown"
             Canvas.Left="336" 
             Canvas.Top="101" 
             Width="171"
@@ -129,5 +134,14 @@
         <Label Content="input a lowercase" Height="25" Canvas.Left="228" Canvas.Top="134" Width="103"/>
         <Label Content="letter" Height="25" Canvas.Left="228" Canvas.Top="147" Width="103"/>
         <Label Content="Guess the full word" Height="31" Canvas.Left="336" Canvas.Top="134" Width="171"/>
+        <Button 
+            x:Name="btnStart"
+            Content="Start/reset" 
+            Height="19" 
+            Background="SaddleBrown"
+            Canvas.Left="146" 
+            Canvas.Top="26" 
+            Width="80"
+            Click="btnStart_Click"/>
     </Canvas>
 </Window>

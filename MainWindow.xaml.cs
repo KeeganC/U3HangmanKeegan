@@ -25,15 +25,20 @@ namespace U3HangmanKeegan
     /// </summary>
     public partial class MainWindow : Window
     {
-        string[] sebisbad = new string[20];
+        Random random = new Random();
+        string strWordLineNumber = "";
 
         public MainWindow()
         {
             InitializeComponent();
+            SelectWord();
         }
 
-        StreamReader streamReader = new StreamReader("wordList.txt");
-        
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            strWordLineNumber = random.Next(1, 15).ToString();
+        }
 
         private void btnSolve_Click(object sender, RoutedEventArgs e)
         {
@@ -43,6 +48,23 @@ namespace U3HangmanKeegan
         private void btnGuess_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private static void SelectWord()
+        {
+            StreamReader streamReader = new StreamReader("wordList.txt");
+
+            try
+            {
+                while (!streamReader.EndOfStream)
+                {
+                    string line = streamReader.ReadLine();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
