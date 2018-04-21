@@ -77,8 +77,8 @@
             Fill="Silver" Height="36" Canvas.Left="110" Stroke="Black" StrokeThickness="2" Canvas.Top="50" Width="36"/>
         <Label 
             x:Name="lblGuessed"
-            Content="Letters guessed:" 
-            Canvas.Left="10" Canvas.Top="181" Width="497"/>
+            Content=":" 
+            Canvas.Left="93" Canvas.Top="181" Width="414"/>
         <Label 
             x:Name="lblShowWord"
             FontSize="30"
@@ -143,5 +143,6 @@
             Canvas.Top="26" 
             Width="80"
             Click="btnStart_Click"/>
+        <Label Content="Letters guessed" Height="26" Canvas.Left="10" Canvas.Top="181" Width="96"/>
     </Canvas>
 </Window>
