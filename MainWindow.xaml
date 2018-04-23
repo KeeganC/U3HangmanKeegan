@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:U3HangmanKeegan"
         mc:Ignorable="d"
         Title="Don't get Hanged, man, the game" Height="350" Width="525">
-    <Canvas Background="SandyBrown">
+    <Canvas x:Name="myCanvas" Background = "SandyBrown">
         <Rectangle 
             Fill="SaddleBrown" Height="139" Canvas.Left="46" Stroke="SaddleBrown" Canvas.Top="26" Width="8"/>
         <Rectangle 
@@ -76,10 +76,6 @@
             Visibility="Hidden"
             Fill="Silver" Height="36" Canvas.Left="110" Stroke="Black" StrokeThickness="2" Canvas.Top="50" Width="36"/>
         <Label 
-            x:Name="lblGuessed"
-            Content=":" 
-            Canvas.Left="93" Canvas.Top="181" Width="414"/>
-        <Label 
             x:Name="lblShowWord"
             FontSize="30"
             HorizontalContentAlignment="Center"
@@ -131,9 +127,9 @@
             Canvas.Top="101" 
             Width="171"
             Click="btnSolve_Click"/>
-        <Label Content="input a lowercase" Height="25" Canvas.Left="228" Canvas.Top="134" Width="103"/>
+        <Label Content="input a lowercase" Background="Beige" Height="38" Canvas.Left="228" Canvas.Top="134" Width="103"/>
         <Label Content="letter" Height="25" Canvas.Left="228" Canvas.Top="147" Width="103"/>
-        <Label Content="Guess the full word" Height="31" Canvas.Left="336" Canvas.Top="134" Width="171"/>
+        <Label Content="Guess the full word" Background="Beige" Height="31" Canvas.Left="336" Canvas.Top="134" Width="171"/>
         <Button 
             x:Name="btnStart"
             Content="Start/reset" 
@@ -143,6 +139,11 @@
             Canvas.Top="26" 
             Width="80"
             Click="btnStart_Click"/>
-        <Label Content="Letters guessed" Height="26" Canvas.Left="10" Canvas.Top="181" Width="96"/>
+        <Label Content="Letters guessed" Background="Beige" Height="26" Canvas.Left="10" Canvas.Top="181" Width="96"/>
+        <Label 
+            x:Name="lblGuessed"
+            Content=":" 
+            Background="Beige"
+            Canvas.Left="97" Canvas.Top="181" Width="410"/>
     </Canvas>
 </Window>

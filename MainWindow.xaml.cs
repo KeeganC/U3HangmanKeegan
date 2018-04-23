@@ -38,6 +38,10 @@ namespace U3HangmanKeegan
         public MainWindow()
         {
             InitializeComponent();
+            //sets backround image
+            ImageBrush gallows = new ImageBrush();
+            gallows.ImageSource = new BitmapImage(new Uri("https://dailytimes.com.pk/static/uploads/original/five-terrorists-sent-to-the-gallows-c79c76c915a08e72cca13837c665fe80.jpg"));
+            myCanvas.Background = gallows;
         }
 
         // sets a word ready to be guessed
@@ -46,7 +50,7 @@ namespace U3HangmanKeegan
             //picks the word from the list
             strWordLineNumber = random.Next(1, 15).ToString();
             //NIU MessageBox.Show(strWordLineNumber);
-            SelectWord();
+            SelectWord(); // add number of the word you want in the brackets for testing mode
             //NIU MessageBox.Show(strTargetWord);
 
             //sets the number of spaces for letters
@@ -95,7 +99,7 @@ namespace U3HangmanKeegan
                 MistakeMade();
             }
         }
-        
+
         //guessing a letter
         private void btnGuess_Click(object sender, RoutedEventArgs e)
         {
@@ -127,18 +131,18 @@ namespace U3HangmanKeegan
         }
 
         //Method to select the word randomly from a list
-        private static void SelectWord()
+        private static void SelectWord() // add int x1 in the brackets for testing mode
         {
             StreamReader streamReader = new StreamReader("wordList.txt");
 
             try
             {
-                while (!streamReader.EndOfStream)
+                while (!streamReader.EndOfStream) 
                 {
                     string line = streamReader.ReadLine();
-                    if (line.Contains(strWordLineNumber + " "))
+                    if (line.Contains(strWordLineNumber + " ")) // replace strWordLineNumber with int x1 in the brackets for testing
                     {
-                        strTargetWord = line.Substring(strWordLineNumber.Length + 1); 
+                        strTargetWord = line.Substring(strWordLineNumber.Length + 1);
                         streamReader.ReadToEnd();
                     }
                 }
